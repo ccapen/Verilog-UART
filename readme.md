@@ -35,7 +35,7 @@
 2. 发送模块的busy信号在整个发送过程中为高，此时模块忽略输入的数据和发送使能信号。
 3. 接收模块的error信号仅对校验位进行响应，若配置为“N”无校验模式，error信号将一直保持为低。该信号仅在每次接收到一个完整数据时发生改变，若校验成功，error清0并保持，同时生成一个valid信号；若校验失败，error置1并保持，此时valid信号无动作。
 
-# UART transceiver using Verilog HDL#
+# UART transceiver using Verilog HDL #
 ## Specifications ##
 1. Parametric baudrate, data bits, check mode, and stop bits.
 2. Normally work in Altera EP4CE10 FPGA, 50MHz clock frequency, 600 to 500000 boudrate, 5 to 8 data bits, "NOEMS" check mode, 1/1.5/2 stop bits. 
